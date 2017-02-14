@@ -1,0 +1,8 @@
+<div class="container">
+  <h2><%= @task.done %> <%= @task.name %></h2>
+  <p><%= @task.description %></p>
+
+    <%= button_to 'Update', edit_task_path(:id => @task), :class => "btn btn-primary", :method => :get %>
+    <br>
+    <%= button_to 'Delete', task_path(:id => @task), method: 'delete', :class => 'btn btn-primary', remote: true %>
+</div>

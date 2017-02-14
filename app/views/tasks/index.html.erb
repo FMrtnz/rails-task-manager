@@ -1,0 +1,10 @@
+
+<div class="container">
+    <h2>Home</h2>
+
+    <% @tasks.each do |task| %>
+      <p><%=  task.done %><%= link_to task.name, task_path(task) %></p>
+    <% end %>
+
+    <p><%= button_to 'Create', new_task_path, method: 'get', :class => 'btn btn-primary' %></p>
+</div>
